@@ -1,6 +1,6 @@
 # M.O.D - Rap Artist Website
 
-🔥 **Raw • Authentic • Underground** 🔥
+🔥 **Money • Over • Death** 🔥
 
 A modern, gritty website for rap artist M.O.D featuring a dark aesthetic with neon green accents, street-inspired design, and professional booking capabilities.
 

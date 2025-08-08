@@ -288,7 +288,7 @@ document.addEventListener('keydown', (e) => {
 
 // Console Easter Egg
 console.log(`
-%c🎤 M.O.D - Raw • Authentic • Underground 🎤
+%c🎤 M.O.D - Money • Over • Death 🎤
 %cWelcome to the underground. Check out the latest tracks!
 `, 
 'color: #00ff41; font-size: 16px; font-weight: bold;',
