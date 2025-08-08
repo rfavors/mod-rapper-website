@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  mod-website:
+    build: .
+    ports:
+      - "80:80"
+    restart: unless-stopped
+    container_name: mod-rap-website
+    environment:
+      - NODE_ENV=production
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.mod-website.rule=Host(`your-domain.com`)"
+      - "traefik.http.routers.mod-website.entrypoints=websecure"
+      - "traefik.http.routers.mod-website.tls.certresolver=letsencrypt"
+      - "traefik.http.services.mod-website.loadbalancer.server.port=80"
