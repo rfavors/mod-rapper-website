@@ -143,7 +143,7 @@ function showNotification(message, type = 'info') {
         position: fixed;
         top: 100px;
         right: 20px;
-        background: ${type === 'success' ? '#00ff41' : type === 'error' ? '#ff4444' : '#333'};
+        background: ${type === 'success' ? '#ff0041' : type === 'error' ? '#ff4444' : '#333'};
         color: ${type === 'success' || type === 'error' ? '#000' : '#fff'};
         padding: 15px 20px;
         border-radius: 5px;
@@ -288,10 +288,10 @@ document.addEventListener('keydown', (e) => {
 
 // Console Easter Egg
 console.log(`
-%c🎤 M.O.D - Money • Over • Death 🎤
+%c🎤 M.O.D! - Money • Over • Death 🎤
 %cWelcome to the underground. Check out the latest tracks!
 `, 
-'color: #00ff41; font-size: 16px; font-weight: bold;',
+'color: #ff0041; font-size: 16px; font-weight: bold; text-shadow: 0 0 10px #ff0041;',
 'color: #ffffff; font-size: 12px;'
 );
 

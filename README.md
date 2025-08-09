@@ -1,12 +1,12 @@
-# M.O.D - Rap Artist Website
+# M.O.D! - Rap Artist Website
 
 🔥 **Money • Over • Death** 🔥
 
-A modern, gritty website for rap artist M.O.D featuring a dark aesthetic with neon green accents, street-inspired design, and professional booking capabilities.
+A modern, gritty website for rap artist M.O.D! featuring a dark aesthetic with neon red accents, street-inspired design, and professional booking capabilities.
 
 ## Features
 
-- **Dark, Street-Inspired Design**: Black background with neon green (#00ff41) accents
+- **Dark, Street-Inspired Design**: Black background with neon red (#ff0041) accents
 - **Fully Responsive**: Optimized for desktop, tablet, and mobile devices
 - **Interactive Music Catalog**: Track cards with play button animations
 - **Professional Booking Form**: Contact form with validation for industry inquiries
@@ -210,7 +210,7 @@ MODRapper806/
 
 ## License
 
-© 2025 M.O.D. All rights reserved.
+© 2025 M.O.D!. All rights reserved.
 
 ## Support
 

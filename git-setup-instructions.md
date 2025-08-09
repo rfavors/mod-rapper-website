@@ -6,7 +6,7 @@
 2. **Click the "+" icon** in the top right corner and select "New repository"
 3. **Repository settings:**
    - Repository name: `mod-rapper-website`
-   - Description: `Modern website for M.O.D. rapper with gritty street-inspired design`
+   - Description: `Modern website for M.O.D! rapper with gritty street-inspired design`
    - Set to Public (recommended for portfolio)
    - Do NOT initialize with README (we already have files)
 4. **Click "Create repository"**
@@ -23,7 +23,7 @@ git init
 git add .
 
 # Create initial commit
-git commit -m "Initial commit: M.O.D. rapper website with Docker deployment setup"
+git commit -m "Initial commit: M.O.D! rapper website with Docker deployment setup"
 
 # Add remote origin (replace YOUR_USERNAME with your GitHub username)
 git remote add origin https://github.com/YOUR_USERNAME/mod-rapper-website.git
@@ -37,10 +37,10 @@ git push -u origin main
 
 ```bash
 # Create repository and push
-gh repo create mod-rapper-website --public --description "Modern website for M.O.D. rapper with gritty street-inspired design"
+gh repo create mod-rapper-website --public --description "Modern website for M.O.D! rapper with gritty street-inspired design"
 git init
 git add .
-git commit -m "Initial commit: M.O.D. rapper website with Docker deployment setup"
+git commit -m "Initial commit: M.O.D! rapper website with Docker deployment setup"
 git remote add origin https://github.com/YOUR_USERNAME/mod-rapper-website.git
 git push -u origin main
 ```
