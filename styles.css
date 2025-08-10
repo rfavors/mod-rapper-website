@@ -96,6 +96,47 @@ body {
     transition: 0.3s;
 }
 
+/* Smoke Animation */
+.smoke-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 2s ease-out;
+}
+
+.smoke-container.fade-out {
+    opacity: 0;
+}
+
+.smoke-particle {
+    position: absolute;
+    background: radial-gradient(circle, rgba(255, 0, 65, 0.3) 0%, rgba(255, 0, 65, 0.1) 50%, transparent 100%);
+    border-radius: 50%;
+    animation: smokeRise 4s ease-out forwards;
+}
+
+@keyframes smokeRise {
+    0% {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(-20vh) scale(1.5);
+        opacity: 0;
+    }
+}
+
 /* Hero Section */
 .hero {
     height: 100vh;
@@ -365,6 +406,21 @@ body {
 .about-image {
     display: flex;
     justify-content: center;
+}
+
+.artist-image {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #ff0041;
+    box-shadow: 0 0 30px rgba(255, 0, 65, 0.3);
+    transition: all 0.3s ease;
+}
+
+.artist-image:hover {
+    box-shadow: 0 0 40px rgba(255, 0, 65, 0.5);
+    transform: scale(1.02);
 }
 
 .image-placeholder {

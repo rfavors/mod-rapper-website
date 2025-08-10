@@ -267,10 +267,58 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Smoke Animation on Page Load
+function createSmokeParticles() {
+    const smokeContainer = document.getElementById('smokeContainer');
+    if (!smokeContainer) return;
+    
+    const particleCount = 15;
+    
+    for (let i = 0; i < particleCount; i++) {
+        setTimeout(() => {
+            const particle = document.createElement('div');
+            particle.className = 'smoke-particle';
+            
+            // Random size between 20px and 80px
+            const size = Math.random() * 60 + 20;
+            particle.style.width = size + 'px';
+            particle.style.height = size + 'px';
+            
+            // Random horizontal position
+            particle.style.left = Math.random() * 100 + '%';
+            
+            // Random animation delay and duration
+            const duration = Math.random() * 2 + 3; // 3-5 seconds
+            particle.style.animationDuration = duration + 's';
+            particle.style.animationDelay = Math.random() * 0.5 + 's';
+            
+            smokeContainer.appendChild(particle);
+            
+            // Remove particle after animation
+            setTimeout(() => {
+                if (particle.parentNode) {
+                    particle.parentNode.removeChild(particle);
+                }
+            }, (duration + 0.5) * 1000);
+        }, i * 200); // Stagger particle creation
+    }
+    
+    // Fade out smoke container after 5 seconds
+    setTimeout(() => {
+        smokeContainer.classList.add('fade-out');
+        setTimeout(() => {
+            smokeContainer.style.display = 'none';
+        }, 2000);
+    }, 5000);
+}
+
 // Add loading animation
 window.addEventListener('load', () => {
     document.body.style.opacity = '0';
     document.body.style.transition = 'opacity 0.5s ease';
+    
+    // Initialize smoke animation
+    createSmokeParticles();
     
     setTimeout(() => {
         document.body.style.opacity = '1';
