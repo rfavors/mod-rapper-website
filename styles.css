@@ -223,15 +223,17 @@ body {
 
 /* Hero Main Layout */
 .hero-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 3rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
 }
 
 .hero-text {
-    text-align: left;
+    text-align: center;
+    width: 100%;
 }
 
 .hero-title {
@@ -281,12 +283,13 @@ body {
     position: relative;
     width: 400px;
     height: 500px;
-    border: 3px solid #ff0041;
+    border: 2px solid rgba(255, 0, 65, 0.4);
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 0 30px rgba(255, 0, 65, 0.3);
+    box-shadow: 0 0 20px rgba(255, 0, 65, 0.2);
     transform: perspective(1000px) rotateY(-5deg);
     transition: all 0.3s ease;
+    backdrop-filter: blur(1px);
 }
 
 .hero-image-frame:hover {
@@ -298,11 +301,15 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    object-position: center 20%; /* Focus on face area */
+    opacity: 0.3; /* Low opacity for background effect */
+    transform: scale(1.2); /* Zoom in on the face */
+    transition: all 0.3s ease;
 }
 
 .hero-image-frame:hover .hero-artist-image {
-    transform: scale(1.05);
+    transform: scale(1.25); /* Slightly more zoom on hover */
+    opacity: 0.4; /* Slightly more visible on hover */
 }
 
 .image-overlay {
@@ -311,8 +318,9 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, rgba(255, 0, 65, 0.1), transparent 50%);
+    background: linear-gradient(45deg, rgba(255, 0, 65, 0.05), transparent 50%);
     pointer-events: none;
+    z-index: 1;
 }
 
 .hero-decorative {
@@ -398,33 +406,8 @@ body {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-    .hero-main {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-        text-align: center;
-    }
-    
-    .hero-text {
-        text-align: center;
-        order: 2;
-    }
-    
-    .hero-image-container {
-        order: 1;
-    }
-    
-    .hero-image-frame {
-        width: 350px;
-        height: 450px;
-        transform: none;
-    }
-    
     .hero-title {
         font-size: 4.5rem;
-    }
-    
-    .service-banner {
-        justify-content: center;
     }
     
     .content-indicator {
@@ -437,21 +420,8 @@ body {
         padding: 0 1rem;
     }
     
-    .hero-main {
-        gap: 2rem;
-    }
-    
     .hero-title {
         font-size: 3.5rem;
-    }
-    
-    .service-label {
-        font-size: 1.5rem;
-    }
-    
-    .hero-image-frame {
-        width: 280px;
-        height: 350px;
     }
     
     .hero-buttons {
@@ -463,28 +433,11 @@ body {
     .hero-buttons .btn {
         width: 200px;
     }
-    
-    .deco-element {
-        display: none;
-    }
 }
 
 @media (max-width: 480px) {
     .hero-title {
         font-size: 2.5rem;
-    }
-    
-    .service-label {
-        font-size: 1.2rem;
-    }
-    
-    .hero-image-frame {
-        width: 240px;
-        height: 300px;
-    }
-    
-    .service-lines {
-        display: none;
     }
     
     .indicator-lines {
